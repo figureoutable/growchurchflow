@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
+const BOOKING_URL = "https://cal.com/growchurchflow/discovery";
+
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,12 +31,14 @@ export function SiteHeader() {
           Church Flow
         </Link>
 
-        <Link
-          href="/contact"
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex shrink-0 rounded-full bg-brand-orange px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark md:px-5"
         >
           Book a Call
-        </Link>
+        </a>
       </div>
     </header>
   );

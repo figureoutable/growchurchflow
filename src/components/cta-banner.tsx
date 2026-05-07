@@ -1,5 +1,6 @@
-import Link from "next/link";
 import { FadeIn } from "@/components/fade-in";
+
+const BOOKING_URL = "https://cal.com/growchurchflow/discovery";
 
 export function CtaBanner() {
   return (
@@ -12,12 +13,14 @@ export function CtaBanner() {
           Book a free 30-minute discovery call, and we&apos;ll talk through your
           mission and what a focused digital presence could look like.
         </p>
-        <Link
-          href="/contact"
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-9 inline-flex rounded-full bg-brand-lime px-8 py-3.5 text-base font-bold text-brand-ink transition-transform hover:scale-[1.02] hover:bg-brand-lime-glow"
         >
           Book Your Free Call
-        </Link>
+        </a>
       </FadeIn>
     </section>
   );

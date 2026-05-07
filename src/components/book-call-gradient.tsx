@@ -1,8 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import GradientButton from "@/components/kokonutui/gradient-button";
 import { cn } from "@/lib/utils";
+
+const BOOKING_URL = "https://cal.com/growchurchflow/discovery";
 
 export function BookCallGradientButton({
   label = "Book a Call",
@@ -11,7 +12,6 @@ export function BookCallGradientButton({
   label?: string;
   className?: string;
 }) {
-  const router = useRouter();
   return (
     <GradientButton
       variant="orange"
@@ -21,7 +21,9 @@ export function BookCallGradientButton({
         "h-11 min-w-[10rem] rounded-full font-semibold shadow-sm",
         className
       )}
-      onClick={() => router.push("/contact")}
+      onClick={() =>
+        window.open(BOOKING_URL, "_blank", "noopener,noreferrer")
+      }
     />
   );
 }

@@ -53,12 +53,14 @@ export default function HomePage() {
                 pay.
               </p>
               <div className="mt-10 flex justify-center">
-                <Link
-                  href="/contact"
+                <a
+                  href="https://cal.com/growchurchflow/discovery"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex h-12 items-center justify-center rounded-full bg-white px-8 text-sm font-bold text-brand-orange transition-colors hover:bg-brand-yellow"
                 >
                   Book a Free Discovery Call
-                </Link>
+                </a>
               </div>
             </FadeIn>
           </div>
@@ -321,12 +323,14 @@ export default function HomePage() {
               >
                 See services &amp; email support →
               </Link>
-              <Link
-                href="/contact"
+              <a
+                href="https://cal.com/growchurchflow/discovery"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm font-bold text-brand-orange underline-offset-4 hover:underline"
               >
                 Book a discovery call →
-              </Link>
+              </a>
             </div>
           </FadeIn>
         </div>
